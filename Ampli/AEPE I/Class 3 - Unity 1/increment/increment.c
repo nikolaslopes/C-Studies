@@ -13,4 +13,6 @@ int main(void) {
 
   printf("\n Y Value: Y = %d", incremented_after_execution);
   printf("\n Y value incremented after the first execution: Y = %d", y);
+
+  return 0;
 }

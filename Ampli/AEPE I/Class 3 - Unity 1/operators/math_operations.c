@@ -25,4 +25,6 @@ int main() {
 
   result = x % y;
   printf("\n %d %% %d = %d", x, y, result);
+
+  return 0;
 }
