@@ -8,9 +8,14 @@ struct customer {
   int age;
 };
 
+struct movie {
+  int rating;
+  int is_available;
+};
+
 int main(void) {
   struct customer new_customer;
-  int movie_rating;
+  struct movie movie_verification;
 
   printf("\n Enter the customer name: ");
 
@@ -21,13 +26,21 @@ int main(void) {
   scanf("%d", &new_customer.age);
 
   printf("\n Enter the movie rating: ");
-  scanf("%d", &movie_rating);
-  
-  system("cls");
+  scanf("%d", &movie_verification.rating);
 
-  printf("\nCustomer name: %s", new_customer.name);
-  printf("\nCustomer age: %d", new_customer.age);
-  printf("\nMovie rating: %d", movie_rating);
+  printf("\n Enter (0) if the movie is available or (1) otherwise\n");
+  scanf("%d", &movie_verification.is_available);
+  
+  printf("\n\n\n");
+  system("PAUSE");
+  system("CLS");
+
+  printf("\n Customer name: %s", new_customer.name);
+  printf("\n Customer age: %d", new_customer.age);
+  printf("\n Movie rating: %d", movie_verification.rating);
+  printf("\n Movie available: %s", movie_verification.is_available ? "Is available" : "Is not available");
+  printf("\n Movie can be rented by the customer: %d", (movie_verification.is_available) && (new_customer.age >= movie_verification.rating));
+  printf("\n Difference in customer age and movie rating: %d", (new_customer.age < movie_verification.rating) * (movie_verification.rating - new_customer.age));
 
   return 0;
 }
