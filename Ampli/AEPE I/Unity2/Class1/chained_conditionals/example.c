@@ -13,7 +13,7 @@ int main() {
     if (student_grade >= 50) {
       printf("\n The student is in recovery");
     } else {
-        printf("\n The student is disapproving");
+      printf("\n The student is disapproving");
     }
   }
 
