@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 int main() {
+  int counter = 0;
+
   system("PAUSE");
   system("CLS");
-
-  int counter = 0;
 
   while (counter < 10) {
     printf("\n %d - I LIKE C", counter);
