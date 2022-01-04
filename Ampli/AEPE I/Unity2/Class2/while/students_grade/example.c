@@ -2,9 +2,8 @@
 #include <stdlib.h>
 
 int main(void) {
-
-  char stop;
-  float grade;
+  
+  float grade = 0;
 
   system("PAUSE");
   system("CLS");
