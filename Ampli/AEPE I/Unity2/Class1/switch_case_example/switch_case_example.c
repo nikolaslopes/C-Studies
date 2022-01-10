@@ -26,6 +26,7 @@ int main() {
     
     case 4:
       printf("\n You chose Jiu-jitsu");
+      break;
 
     default:
       printf("\n You chose an invalid option");
