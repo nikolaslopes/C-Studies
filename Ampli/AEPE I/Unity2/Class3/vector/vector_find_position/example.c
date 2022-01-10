@@ -5,7 +5,7 @@
 
 int main() {
   int vector[VECTOR_SIZE];
-  int num, i  = 0, found = 0, option = 0;
+  int num, i  = 0, j = 0,found_number = 0, option = 0;
 
   system("CLS");
 
@@ -17,14 +17,40 @@ int main() {
   system("CLS");
 
   do {
-    printf("\n ***** READ ME *****;");
+    printf("\n ***** READ ME *****\n");
     printf("\n (1) - Find number operation\n (2) - Exit");
     printf("\n\n Enter one option: ");
     scanf("%d", &option);
 
     switch (option) {
       case 1:
-        printf("");
+        system("CLS");
+        printf("\n Enter the number that you want to find: ");
+        scanf("%d", &num);
+
+        while (i < VECTOR_SIZE) {
+          if (vector[i] == num) {
+            found_number = 1;
+          }
+          i ++;
+        }
+
+        printf("\n Vector [");
+        for (j = 0; j < VECTOR_SIZE; j++) {
+          printf(" { %d: %d}, ", j, vector[j]);
+        }
+        printf("]");
+
+        if (found_number == 1) {
+          printf("\n\n The number %d was found on vector's position %d", num, i);
+        } else {
+          printf("\n The number %d was not found on vector", num);
+        }
+
+        printf("\n\n\n");
+        system("PAUSE");
+        system("CLS");
+        break;
 
       case 2:
         system("CLS");
