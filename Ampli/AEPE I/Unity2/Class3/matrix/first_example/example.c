@@ -12,6 +12,7 @@ int main() {
       printf("\n Digite os valores da matriz para [linha %d, coluna %d]: ", linha + 1, coluna + 1);
       scanf("%d", &matriz[linha][coluna]);
     }
+    system("CLS");
   }
 
   system("CLS");
