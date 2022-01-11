@@ -16,66 +16,31 @@ int main() {
 
   system("CLS");
 
-  do {
-    printf("\n ***** READ ME *****\n");
-    printf("\n (1) - Find number operation\n (2) - Exit");
-    printf("\n\n Enter one option: ");
-    scanf("%d", &option);
+  printf("\n Enter the number that you want to find: ");
+  scanf("%d", &number);
 
-    switch (option) {
-      case 1:
-        system("CLS");
+  system("CLS");
 
-        printf("\n Enter the number that you want to find: ");
-        scanf("%d", &number);
+  while (i < VECTOR_SIZE) {
+    if (vector[i] == number) {
+      found_number = 1;
 
-        system("CLS");
-
-        while (i < VECTOR_SIZE) {
-          if (vector[i] == number) {
-            found_number = 1;
-
-            printf("\n Vector [");
-            for (int i = 0; i < VECTOR_SIZE; i++) {
-              printf(" { %d: %d}, ", i, vector[i]);
-            }
-            printf("]\n");
-
-            if (found_number == 1) {
-              printf("\n\n The number %d was found on vector's position %d", number, i);
-            }
-            break;
-          }
-            i ++;
-        }
-        
-        printf("\n The number %d was not found on vector", number);
-
-        printf("\n\n\n");
-        system("PAUSE");
-        system("CLS");
-        break;
-
-      case 2:
-        system("CLS");
-        printf("\n Enter any keyboard key to exit!");
-
-        printf("\n\n\n");
-        system("PAUSE");
-        system("CLS");
-        break;
-
-      default:
-        printf("\n You chose an invalid option");
-
-        printf("\n\n\n");
-        system("PAUSE");
-        system("CLS");
+      break;
     }
+    i++;
+  }
 
-  } while (option != 2);
+  printf("\n Vector [\t");
+  for (int i = 0; i < VECTOR_SIZE; i++) {
+    printf(" { %d: %d }\t", i, vector[i]);
+  }
+  printf("]\n");
 
-  printf("\n Thanks for using our system :)");
+  if (found_number == 1) {
+    printf("\n\n The number %d was found on vector's position %d", number, i);
+  } else {
+    printf("\n The number %d was not found on vector", number);
+  }
 
   printf("\n\n\n");
   system("PAUSE");
