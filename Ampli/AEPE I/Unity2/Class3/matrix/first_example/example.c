@@ -17,6 +17,7 @@ int main() {
   system("CLS");
 
   printf("\n ***** MATRIZ *****\n\n");
+
   for (linha = 0; linha <= 2; linha++) {
     for (coluna = 0; coluna < 3; coluna++) {
       printf("%d\t", matriz[linha][coluna]);
