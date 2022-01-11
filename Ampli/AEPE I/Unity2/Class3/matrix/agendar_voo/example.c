@@ -34,11 +34,29 @@ int main() {
               matrix[num_flight - 1][i] == 1;
             }
           }
+          if (reserved == 1) {
+            printf(("\n Seu voo foi reservado com sucesso!"));
+
+            printf("\n\n\n");
+            system("PAUSE");
+            system("CLS");
+          } else {
+            printf("\n Não há poltronas disponíveis nesse voo!");
+
+            printf("\n\n\n");
+            system("PAUSE");
+            system("CLS");
+          }
+        } else {
+          printf("\n Opção inválida");
+
+          printf("\n\n\n");
+          system("PAUSE");
+          system("CLS");
         }
+        break;
 
       case 2:
-        printf("\n\n\n");
-        system("PAUSE");
         system("CLS");
         break;
 
@@ -49,6 +67,8 @@ int main() {
     }
 
   } while (option != 2);
+
+  printf("\n Obrigado por usar a NIX AIR :)");
 
   printf("\n\n\n");
   system("PAUSE");
