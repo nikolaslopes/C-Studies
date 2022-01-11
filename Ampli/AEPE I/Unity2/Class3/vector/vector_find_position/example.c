@@ -9,7 +9,7 @@ int main() {
 
   system("CLS");
 
-  for (i = 0; i < VECTOR_SIZE; i++) {
+  for (int i = 0; i < VECTOR_SIZE; i++) {
     printf("\n Enter a number: ");
     scanf("%d", &vector[i]);
   }
@@ -35,22 +35,21 @@ int main() {
           if (vector[i] == number) {
             found_number = 1;
 
+            printf("\n Vector [");
+            for (int i = 0; i < VECTOR_SIZE; i++) {
+              printf(" { %d: %d}, ", i, vector[i]);
+            }
+            printf("]\n");
+
+            if (found_number == 1) {
+              printf("\n\n The number %d was found on vector's position %d", number, i);
+            }
             break;
-          } 
-          i ++;
+          }
+            i ++;
         }
-
-        printf("\n Vector [");
-        for (i = 0; i < VECTOR_SIZE; i++) {
-          printf(" { %d: %d}, ", i, vector[i]);
-        }
-        printf("]");
-
-        if (found_number == 1) {
-          printf("\n\n The number %d was found on vector's position %d", number, i);
-        } else {
-          printf("\n The number %d was not found on vector", number);
-        }
+        
+        printf("\n The number %d was not found on vector", number);
 
         printf("\n\n\n");
         system("PAUSE");
