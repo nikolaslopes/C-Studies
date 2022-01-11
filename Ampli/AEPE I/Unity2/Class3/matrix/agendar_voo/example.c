@@ -31,7 +31,7 @@ int main() {
           for (int i = 0; i < 5; i++) {
             if (matrix[num_flight - 1][i] == 0) {
               reserved = 1;
-              matrix[num_flight - 1][i] == 1;
+              matrix[num_flight - 1][i] = 1;
             }
           }
           if (reserved == 1) {
