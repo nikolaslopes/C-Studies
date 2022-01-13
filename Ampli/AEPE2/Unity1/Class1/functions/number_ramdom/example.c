@@ -1,24 +1,27 @@
 #include <stdio.h>
 
 int* gerarRandomico() {
-  static int r[10];
-  int a;
 
-  for (a = 0; a < 10; a++) {
-    r[a] = rand() % 100;
-    printf("\n r[%d] = %d", a, r[a]);
+  static int vetor[10];
+  int i;
+
+  for (i = 0; i < 10; i++) {
+    vetor[i] = rand() % 100;
+    printf("\n vetor[%d] = %d", i, vetor[i]);
   }
-  return r;
+  return vetor;
 }
 
 int main() {
 
-  int *p;
-  int i;
+  int *ponteiro_para_vetor;
+  int j;
 
-  p = gerarRandomico();
+  ponteiro_para_vetor = gerarRandomico();
 
-  for (i = 0; i < 10; i++) {
-    printf("\n p[%d] = ")
+  for (j = 0; j < 10; j++) {
+    printf("\n ponteiro[%d] = %d", j, ponteiro_para_vetor[j]);
   }
+
+  return 0;
 }
