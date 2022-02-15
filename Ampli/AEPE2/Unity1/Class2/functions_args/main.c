@@ -13,7 +13,7 @@ int main() {
 
   printf("\n Sum result = %d", result);
 
-  system("\n\n\n");
+  printf("\n\n\n");
   system("PAUSE");
   system("CLS");
 
