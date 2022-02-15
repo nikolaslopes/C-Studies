@@ -12,5 +12,10 @@ int main() {
   result = sum(2, 2);
 
   printf("\n Sum result = %d", result);
+
+  system("\n\n\n");
+  system("PAUSE");
+  system("CLS");
+
   return 0;
 }
