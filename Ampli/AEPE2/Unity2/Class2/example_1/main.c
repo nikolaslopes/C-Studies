@@ -48,16 +48,24 @@ int desempilhar(struct Pilha *p)
   assert(p->topo != NULL);
 
   struct No *aux = p->topo;
-  int elemento = aux->proximo;
+  int elemento = aux->info;
   p->topo = aux->proximo;
   p->tamanho--;
   free(aux);
   return elemento;
 }
 
-main()
+int main()
 {
   system("CLS");
+  struct Pilha *minha_pilha = criar();
+  empilhar(minha_pilha, 1);
+  empilhar(minha_pilha, 2);
+  empilhar(minha_pilha, 3);
+
+  printf("%d ", desempilhar(minha_pilha));
+  printf("%d ", desempilhar(minha_pilha));
+  printf("%d ", desempilhar(minha_pilha));
 
   printf("\n\n\n");
   system("PAUSE");
